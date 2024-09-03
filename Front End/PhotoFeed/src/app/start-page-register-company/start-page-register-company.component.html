@@ -1,0 +1,47 @@
+ 
+<form class="register_form" [formGroup]="registerForm">
+  <h2>
+      Company Register:
+  </h2>
+
+  <mat-form-field>
+      <input matInput placeholder="Company name" formControlName="CompanyName" required>
+  </mat-form-field>
+ 
+  <div>
+      <span>Upload a profile picture: </span>
+      <input type="file" formControlName="ProfilePicture" required (change)="onFileChanged($event)">
+      <span *ngIf="display_img">
+          <img src="{{base64Files}}" id="display_img" alt="Profile Picture"> 
+      </span>
+  </div>
+  
+  <mat-form-field>
+    <mat-select placeholder="Select Company Members" formControlName="Members" multiple>
+      <mat-option *ngFor="let employee of employeeList" [value]="employee.IdUser">{{employee.UserName}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+      <input matInput placeholder="Email" formControlName="Email" required email>
+  </mat-form-field>
+  
+  <mat-form-field>
+      <input matInput placeholder="Password" type=password formControlName="Password" required>
+  </mat-form-field><br>
+
+  <mat-form-field>
+      <textarea matInput placeholder="Description (Optional)" formControlName="Description"></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Contact website name" formControlName="ContactName" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Contact website link" formControlName="ContactLink" required>
+  </mat-form-field>
+  
+  <button mat-stroked-button (click)="Register()" [disabled]="registerForm.invalid">Register</button>
+  
+</form>

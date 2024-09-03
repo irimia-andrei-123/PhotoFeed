@@ -1,0 +1,11 @@
+
+<div class="company-members-container">
+    <h2>Company's members:</h2>
+  
+    <div class="members-container">
+      <div class="member" *ngFor="let member of members">      
+        <img class="admin-user-profile-image" src={{member.ProfilePicture}}>
+        <a class="admin-user-name" (click)="GoToUser(member.IdUser)">{{member.UserName}}</a>
+      </div>
+    </div>
+  </div>

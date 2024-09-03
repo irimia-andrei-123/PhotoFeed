@@ -1,0 +1,80 @@
+
+<div class="user-profile-container">
+
+  <div class="user-info-left-container">
+    
+    <div class="user-info-left-header">
+      <h2>{{contestInfo.ContestName}}</h2>
+    </div>
+
+    <div class="user-info-left">
+      {{contestInfo.Description}}
+    </div>
+
+    <div class="user-info-left">
+      <p class="info-title-rewards">Rewards</p>
+
+      <div class="user-info-inline">
+          
+          <div>
+              <p>First place:</p>
+              <p class="reward-info">1000 points</p>
+          </div>
+
+          <div>
+              <p>Second place:</p>
+              <p class="reward-info">750 points</p>
+          </div>
+
+          <div>
+              <p>Third place:</p>
+              <p class="reward-info">500 points</p>
+          </div>
+
+          <div>
+              <p>Honorable mentions (4th-10th):</p>
+              <p class="reward-info">100 points</p>
+          </div>
+      </div>
+    </div>
+    
+    <div class="submit-form-container">
+      <hr>
+
+      <div *ngIf="!contestEnded; else noSubmit">
+        <p class="info-title-rewards">Submit your images:</p>
+        <br>
+        
+        <form class="submission_form" [formGroup]="submissionForm">
+            <input type="file" multiple formControlName="SubmitedPictures" required (change)="onFileChanged($event,contestInfo.MaximumPictureNumber)">
+            
+            <button mat-stroked-button (click)="Submit()" [disabled]="submissionForm.invalid">Submit</button>
+          
+            <br>
+            <p *ngIf="noSubmitImgs">Pictures to submit:</p>
+            <div *ngFor="let i of noSubmitImgs" class="images">
+              <img src="{{base64Files[i]}}" id="display_img" alt="Submit Picture"> 
+            </div>
+
+        </form>
+      </div>
+
+      <ng-template #noSubmit>
+        Submissions closed. 
+      </ng-template>
+    </div>
+  </div>
+
+  <div class="user-info-right-container">
+
+      <div class="vote-button">
+        <button (click)="navigateToVote()"> {{ contestEnded? "Results" : "Vote" }}</button>
+      </div>
+
+      <p class="website-info">This contest admits {{contestInfo.MaximumPictureNumber}} submission</p>
+
+    <p class="website-info">Submissions end on {{contestInfo.EndDate | date: 'dd/MM/yyyy'}}</p>
+
+  </div>
+
+</div>

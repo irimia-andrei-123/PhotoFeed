@@ -1,0 +1,14 @@
+
+<div class="contests-page-container">
+  <h2>Contests:</h2>
+
+  <div class="contests-container">
+    <div class="contest" *ngFor="let i of activeContestProList">
+      <div class="contest-name">
+          <h2 (click)="GoToContest(i.IdContestPro)">{{i.ContestName}}</h2>
+          <p>{{i.Description}}</p>
+      </div>
+      <button class="contest-end" (click)="EndContest(i.IdContestPro)">End contest</button>
+    </div>
+  </div>
+</div>

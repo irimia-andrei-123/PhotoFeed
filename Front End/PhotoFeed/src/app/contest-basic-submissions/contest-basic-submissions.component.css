@@ -1,0 +1,47 @@
+
+.portfolio-page-container{
+    margin: 15px 50px 0 50px;
+}
+
+.portfolio-images-container{
+    margin: auto;
+    width: 55%;
+}
+
+.image-info{ 
+    margin: 10px 0 70px 0; 
+}
+
+.image-info a{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.portfolio-image{
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.vote{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.vote button{ 
+    flex: 2;
+    height: 35px;
+    margin-top: 8px;
+    background-color: white;
+}
+
+.vote mat-slider {
+    flex: 10;
+    margin: 0 50px;
+    background-color: rgb(246, 246, 246);
+    border-radius: 10px;
+}

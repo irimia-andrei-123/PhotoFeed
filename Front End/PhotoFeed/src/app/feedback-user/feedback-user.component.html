@@ -1,0 +1,48 @@
+
+<div class="category-images-container">
+  <div id="submit-feedback-image">
+    <form class="feedback-image-upload-form" [formGroup]="feedbackImageForm">
+      <h2>Upload Image</h2>
+
+      <div>
+        <span>Upload an image: </span>
+        <input type="file" formControlName="FeedbackPicture" required (change)="onFileChanged($event)">
+        <span *ngIf="display_img">
+          <img src="{{base64Files}}" id="display_img" alt="Feedback Picture">
+        </span>
+      </div>
+
+      <mat-form-field>
+        <mat-label>Category:</mat-label>
+        <mat-select formControlName="FeedbackCategory" required>
+          <mat-option *ngFor="let category of categoryArr" [value]="category.IdCategory">
+            {{category.CategoryName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <br>
+      <mat-form-field>
+        <input matInput placeholder="Description" formControlName="Description">
+      </mat-form-field>
+
+      <br>
+      <button mat-stroked-button (click)="Submit()" [disabled]="feedbackImageForm.invalid">Submit</button>
+
+    </form>
+  </div>
+
+  <hr>
+  <br><br>
+  <div id="prevous-submision">
+    <h2>Your prevous images</h2>
+
+    <div #displayImages>
+      <div *ngFor="let i of userSubmissions" class="feedback-user-images-container">
+        <div class="category-image">
+          <img src="{{i.Photo}}" class="category-container-image" alt="Submission" (click)="GoToImage(i.IdPhotoFeedback)"> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

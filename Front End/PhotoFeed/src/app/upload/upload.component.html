@@ -1,0 +1,45 @@
+ 
+<form class="picture-upload-form" [formGroup]="uploadForm">
+  <h2>
+      Upload an image:
+  </h2>
+
+  <div class="upload-info">
+    <div>
+      <span>Select the picture: </span>
+      <input type="file" formControlName="Picture" (change)="onFileChanged($event)" required>
+      <span *ngIf="display_img">
+          <img src="{{base64Files}}" id="display_img" alt="Picture"> 
+      </span>
+    </div>
+
+    <mat-form-field>
+      <textarea matInput placeholder="Description" formControlName="Description"></textarea>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-select placeholder="Select Categories" formControlName="Categories" multiple>
+        <mat-option *ngFor="let category of categoryList" [value]="category.IdCategory">{{category.CategoryName}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-chip-list #chipList>
+        <mat-chip *ngFor="let tag of tags" [selectable]="selectable"
+                  [removable]="removable" (removed)="remove(tag)">
+          {{tag}}
+          <mat-icon matChipRemove>cancel</mat-icon>
+        </mat-chip>
+        <input placeholder="Write Tags"
+                [matChipInputFor]="chipList"
+                [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                [matChipInputAddOnBlur]="addOnBlur"
+                (matChipInputTokenEnd)="add($event)"
+                formControlName="Tags"
+                required>
+      </mat-chip-list>
+    </mat-form-field>
+    
+    <button mat-stroked-button (click)="Upload()" [disabled]="uploadForm.invalid">Upload</button>
+  </div>
+</form>

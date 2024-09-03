@@ -1,0 +1,50 @@
+
+<div class="user-profile-container">
+
+  <div class="user-info-left-container">
+    
+    <div class="user-info-left-header">
+      <h2>Info</h2>
+    </div>
+
+    <div class="user-info-left">
+      <p class="info-title">Description:</p>
+      <p>{{user.Description}}</p>
+
+      <div class="user-info-inline">
+        <div>
+          <p class="info-title">Rating:</p>
+          <p>{{user.Points}}</p>  
+        </div>
+      </div>
+
+      <br>
+      <p class="info-title">Contact:</p>
+      <div *ngFor="let i of user.Contact">
+        <a class="website-info" href="{{i.WebsiteUrl}}">{{i.WebsiteName}}</a><br>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="user-info-right-container">
+
+  <img class="user-image" src="{{user.ProfilePicture}}">
+
+    <div class="user-info-right">
+      <p class="info-title">{{user.UserName}}</p>
+
+      <p class="website-info" (click)="navigateTo('user-portfolio')">Portfolio</p>
+
+      <p class="website-info" (click)="navigateTo('company-members')" *ngIf="isCompany">Members</p>
+ 
+      <p class="website-info" (click)="navigateTo('company-contests')" *ngIf="isCompany">Contests</p>
+      
+      <p class="website-info" (click)="navigateToNewContest()" *ngIf="currentCompany">New Contest</p>      
+
+    </div>
+
+  </div>
+
+</div>

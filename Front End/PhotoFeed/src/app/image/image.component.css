@@ -1,0 +1,38 @@
+.post{
+    margin: 20px 40px;
+}
+
+.post-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+#user_name{
+    align-self: center;
+    margin-left: 10px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#display_img{
+    width: 100px;
+}
+
+.picture-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.post-image{
+    width: 100%;
+}
+
+#post_img{
+    width: 100%;
+}

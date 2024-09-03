@@ -1,0 +1,55 @@
+
+.search{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    flex-direction: row;
+}
+
+.tags{
+    flex: 11;
+    margin-right: 20px;
+}
+
+.search button{
+    flex: 1;
+    height: 40px;
+    margin-top: 8px;
+}
+
+.search-results{
+    margin: 45px 25px 0 50px;
+}
+
+.search-result-images-container{
+    display: inline-table;
+    width: 30%;
+    height: auto;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: rgb(243, 243, 243);
+}
+
+.search-image{
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.search-images-container{
+    width: 100%;
+
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.search-user{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 3px 0 8px 10px;
+}

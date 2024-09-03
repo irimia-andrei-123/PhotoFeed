@@ -1,0 +1,15 @@
+
+<div class="feedback-category-container">
+  <div *ngIf="!display_img;else displayImages">
+    <h2>Category Empty</h2>
+  </div>
+  <ng-template #displayImages>
+    <div class="feedback-image-container">
+      <div *ngFor="let i of imgArr" class="feedback-category-images-container">
+        <a class="feedback-image-poster" (click)="GoToUser(i.IdUser)">{{i.UserName}}</a> <!-- redirect cu i.userid-->
+        <img src="{{i.Photo}}" class="feedback-image" alt="Feedback Picture" (click)="GoToImage(i.IdImage)"> 
+      </div>
+    </div>
+  </ng-template>
+</div>
+  

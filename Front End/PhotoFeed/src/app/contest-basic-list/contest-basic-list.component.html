@@ -1,0 +1,21 @@
+
+<div class="contests-page-container">
+  <h2>Ongoing Contests:</h2>
+
+  <div class="contests-container">
+    <div class="contest" *ngFor="let i of activeContestBasicList">
+      <h2 class="contest-name"  (click)="navigateToContest(i.IdContestBasic)">{{i.ContestName}}</h2> <!--onclick go to contest page-->
+      <p class="contest-description">{{i.Description}}</p>
+    </div>
+  </div>
+  
+  <h2>Finished Contests:</h2>
+
+  <div class="contests-container">
+    <div class="contest" *ngFor="let i of inactiveContestBasicList">
+      <h2 class="contest-name"  (click)="navigateToContest(i.IdContestBasic)">{{i.ContestName}}</h2> <!--onclick go to contest page-->
+      <p class="contest-description">{{i.Description}}</p>
+    </div>
+  </div>
+
+</div>

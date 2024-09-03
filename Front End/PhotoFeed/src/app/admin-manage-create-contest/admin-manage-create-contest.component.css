@@ -1,0 +1,26 @@
+
+.contest-basic-form-container{
+    margin: 15px 50px 0 50px;
+}
+
+.contest-basic-form{
+    margin: 30px 50px 0 25px;
+}
+
+.contest-basic-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.contest-basic-field{
+    font-weight: bold;
+    flex: 3;
+}
+
+.contest-basic-info{
+    flex: 9;
+}
+
+.create-btn{
+    margin-top:40px;
+}

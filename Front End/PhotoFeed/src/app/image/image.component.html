@@ -1,0 +1,27 @@
+
+<div class="full-image-container">
+
+  <div class="post">
+
+    <div class="post-info">
+      <div class="user-info">
+        <img src="{{post.UserPicture}}" id="display_img" alt="User Picture">
+        <p id="user_name">{{post.UserName}}</p>
+      </div>
+
+      <div class="picture-info">
+        <p>Upload date - {{post.DatePosted}}</p> <!-- date on the left -->
+        <p>{{post.Description}}</p>
+      </div>
+    </div>
+
+    <div class="post-image">
+      <img src="{{post.Photo}}" id="post_img" alt="User Picture">
+    </div>
+  </div>
+
+  <div class="post-comments">
+    <div class="emptyFiller"></div> <!--ng-for cu un div nebun-->
+  </div>
+
+</div>

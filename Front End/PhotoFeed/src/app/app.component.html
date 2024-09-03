@@ -1,0 +1,51 @@
+<mat-toolbar fxLayout="row" class="nav_bar">
+  <p fxFlex="5">
+    PhotoFeed
+  </p>
+  <div fxFlex="10" *ngIf="isUser">
+    <button mat-button (click)="navigateTo('homepage')">Homepage</button>
+  </div>
+  <div fxFlex="10" *ngIf="isUser">
+    <button mat-button [matMenuTriggerFor]="contestsMenu">Contests</button>
+    <mat-menu #contestsMenu="matMenu">
+      <button mat-menu-item (click)="navigateTo('basic-contests-list')">Basic Contests</button>
+      <button mat-menu-item (click)="navigateTo('pro-contests-list')">Pro Contests</button>
+    </mat-menu>
+  </div>
+  <div fxFlex="10" *ngIf="isUser">
+    <button mat-button [matMenuTriggerFor]="feedbackMenu">Feedback</button>
+    <mat-menu #feedbackMenu="matMenu">
+      <button mat-menu-item (click)="navigateTo('feedback')">Give Feedback</button>
+      <button mat-menu-item (click)="navigateTo('user-feedback')">Request Feedback</button>
+    </mat-menu>
+  </div>
+  <div fxFlex="10">
+    <button mat-button (click)="navigateTo('categories')">Categories</button>
+  </div>
+  <div fxFlex="10">
+    <button mat-button (click)="navigateTo('search')">Search</button>
+  </div>
+  <div fxFlex="10">
+    <button mat-button (click)="navigateTo('leaderboards')">Leaderboards</button>
+  </div>
+  <div fxFlex="25" *ngIf="isUser; else isCompany"></div>
+  <ng-template #isCompany>
+    <div fxFlex="55"></div>
+  </ng-template>
+  <div fxFlex="10">
+    <button mat-button [matMenuTriggerFor]="profileMenu">
+      <i class="material-icons">
+        person
+      </i>
+    </button>
+    <mat-menu #profileMenu="matMenu">
+      <button mat-menu-item (click)="navigateToProfile()">Profile</button>
+      <button mat-menu-item (click)="logout()">Logout</button>
+    </mat-menu>
+  </div>
+    
+</mat-toolbar>
+
+<div class="after_nav">
+  <router-outlet></router-outlet>
+</div>

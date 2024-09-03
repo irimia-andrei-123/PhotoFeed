@@ -1,0 +1,31 @@
+<mat-card class="startpage_card">
+  <mat-card-header>
+    <h2> Welcome to PhotoFeed!</h2>
+  </mat-card-header>
+  
+  <mat-card-content>
+    <p>
+      To continue you are requierd to have an account.
+    </p>
+    <p>
+      Please login or register.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-stroked-button (click)="navigateTo('login')">Login</button>
+    <button mat-stroked-button (click)="loadRegister()">Register</button>
+  </mat-card-actions>
+  
+
+  <mat-card id="register_card">
+    <mat-card-content>
+      <h2>Do you want to register as a company or as a user?</h2>
+    </mat-card-content>
+    
+    <mat-card-actions>
+      <button mat-stroked-button (click)="navigateTo('register-company')">Company</button>
+      <button mat-stroked-button (click)="navigateTo('register-user')">User</button>
+    </mat-card-actions>
+  </mat-card>
+
+</mat-card>

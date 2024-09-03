@@ -1,0 +1,15 @@
+
+<div class="contests-page-container">
+  <h2>Contests:</h2>
+
+  <div class="contests-container">
+    <div class="contest" *ngFor="let i of activeContestBasicList">
+      <!-- <img class="contest-image" src="https://i.ytimg.com/an_webp/mYiCGLgRuAs/mqdefault_6s.webp?du=3000&sqp=CNH-xekF&rs=AOn4CLDsHYXDH2wi1cIkRIe575ZyiM8FYA"> -->
+      <div class="contest-name">
+          <h2 (click)="GoToContest(i.IdContestBasic)">{{i.ContestName}}</h2> <!--onclick go to contest page-->
+          <p>{{i.Description}}</p>
+      </div>
+      <button class="contest-end" (click)="EndContest(i.IdContestBasic)">End contest</button>
+    </div>
+  </div>
+</div>

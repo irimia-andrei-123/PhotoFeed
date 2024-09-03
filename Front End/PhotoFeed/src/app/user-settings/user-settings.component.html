@@ -1,0 +1,54 @@
+
+<div class="edit-page-container">
+  <h2>Edit info:</h2>
+
+  <form class="edit-form" [formGroup]="editForm">
+  
+    <div class="info-container">
+      <p class="edit-info">Username:</p>
+      <mat-form-field class="new-info">
+        <input matInput placeholder="Username" formControlName="UserName" required>
+      </mat-form-field>
+    </div>
+  
+    <div class="info-container">
+      <p class="edit-info">Profile Picture:</p>
+      <div class="new-info">
+        <p>Upload a new profile picture: </p>
+        <input type="file" formControlName="ProfilePicture" required (change)="onFileChanged($event)">
+        <img src="{{base64Files}}" id="display_img" alt="Profile Picture"> 
+      </div>
+    </div>
+    
+    <div class="info-container">
+      <p class="edit-info">Description:</p>
+      <mat-form-field class="new-info">
+        <textarea matInput placeholder="Description (Optional)" formControlName="Description"></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="info-container">
+      <div class="edit-info">
+        <p>Websites:</p>
+        <button>Add</button>
+      </div> 
+      
+      <div class="new-info">
+        <!--ngfor trimit val din ngfor ca param la save-->
+        <div class="website">
+          <p>1. Website name:</p>
+          <p>website url</p>
+          <button>Delete</button>
+        </div>
+        <div class="website">
+          <p>2. Website name:</p>
+          <p>website url</p>
+          <button>Delete</button>
+        </div>
+      </div>
+    </div>
+    
+    <button mat-stroked-button (click)="Save()" [disabled]="editForm.invalid" class="save-btn">Save Changes</button>
+    
+  </form>
+</div>

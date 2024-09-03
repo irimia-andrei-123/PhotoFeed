@@ -1,0 +1,39 @@
+
+
+<div class="contest-pro-form-container">
+    <h2>Create a contest:</h2>
+  
+    <form class="contest-pro-form" [formGroup]="contestProForm">
+    
+      <div class="contest-pro-container">
+        <p class="contest-pro-field">Contest Name:</p>
+        <mat-form-field class="contest-pro-info">
+          <input matInput placeholder="Contest Name" formControlName="ContestName" required>
+        </mat-form-field>
+      </div>
+    
+      <div class="contest-pro-container">
+        <p class="contest-pro-field">Description:</p>
+        <mat-form-field class="contest-pro-info">
+          <textarea matInput placeholder="Contest Description" formControlName="Description" required></textarea>
+        </mat-form-field>
+      </div>
+      
+      <div class="contest-pro-container">
+        <p class="contest-pro-field">Maximum number of enteries:</p> 
+        <mat-form-field class="contest-pro-info">
+          <input matInput type="number" placeholder="Max number of photo submissions" formControlName="MaxPhotos" required>
+        </mat-form-field>
+      </div>
+  
+      <div class="contest-pro-container">
+        <p class="contest-pro-field">End date:</p> 
+        <mat-form-field class="contest-pro-info">
+          <input matInput type="date" placeholder="Contest End Date" formControlName="EndDate" required>
+        </mat-form-field>
+      </div>
+
+      <button mat-stroked-button (click)="Create()" [disabled]="contestProForm.invalid" class="create-btn">Create Contest</button>
+      
+    </form>
+  </div>

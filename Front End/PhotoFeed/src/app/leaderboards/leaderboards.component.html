@@ -1,0 +1,52 @@
+
+<div fxLayout="column" class="leaderboardContainer">
+  <div fxFlex="2">
+    <mat-form-field class="leaderboard-criteria" >
+      <mat-label>Select the sorting criteria: </mat-label>
+      <mat-select [(value)]="selectedSort" (selectionChange)="ReloadLeaders($event.value)">
+        <mat-option *ngFor="let option of sortCriteria" [value]="option.value">{{option.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div fxFlex="10">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.Position}} </td>
+      </ng-container>
+      
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> <a class="image-poster" (click)="GoToUser(element.UserId)"> {{element.Username}} </a> </td>
+      </ng-container>
+      
+      <!-- TotalPoints Column -->
+      <ng-container matColumnDef="totalPoints">
+        <th mat-header-cell *matHeaderCellDef> Total Points </th>
+        <td mat-cell *matCellDef="let element"> {{element.Points}} </td>
+      </ng-container>
+  
+      <!-- ProContestsWon Column -->
+      <ng-container matColumnDef="proContestsWon">
+        <th mat-header-cell *matHeaderCellDef> Pro Contests Won </th>
+        <td mat-cell *matCellDef="let element"> {{element.ProContestsWon}} </td>
+      </ng-container>
+
+      <!-- BasicContestsWon Column -->
+      <ng-container matColumnDef="basicContestsWon">
+        <th mat-header-cell *matHeaderCellDef> Basic Contests Won </th>
+        <td mat-cell *matCellDef="let element"> {{element.BasicContestsWon}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>

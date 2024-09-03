@@ -1,0 +1,31 @@
+
+<div class="full-container">
+
+  <div class="image-container">
+    <img src="{{post.Photo}}" id="post_img" alt="Feedback Picture">
+  </div>
+
+  <div class="right-side-container">
+    <div class="data-container">
+      <a id="user_name" (click)="GoToUser(post.IdUser)">{{post.UserName}}</a>
+      <p id="date_posted">{{post.DatePosted}}</p>
+      <p id="description">{{post.Description}}</p>
+    </div>
+
+    <div class="comments-container">
+      <div *ngFor="let comment of post.Comments" class="comment-info">
+        <a class="user_name_comment" (click)="GoToUser(comment.IdCommenter)">{{comment.CommenterName}}</a>
+        <p class="date_posted_comment">{{comment.DatePosted}}</p>
+        <p class="description_comment">{{comment.Miscellaneous}}</p>
+      </div>
+    </div>
+
+    <form class="new-comment-form"  [formGroup]="commentForm">
+      <mat-form-field id="comment-text">
+        <textarea matInput placeholder="Comment" formControlName="Comment" required></textarea>
+      </mat-form-field>
+      <button id="comment-button" mat-stroked-button (click)="Comment()" [disabled]="commentForm.invalid">Add comment</button>
+    </form>
+  </div>
+
+</div>

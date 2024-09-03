@@ -1,0 +1,26 @@
+
+.contest-pro-form-container{
+    margin: 15px 50px 0 50px;
+}
+
+.contest-pro-form{
+    margin: 30px 50px 0 25px;
+}
+
+.contest-pro-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.contest-pro-field{
+    font-weight: bold;
+    flex: 3;
+}
+
+.contest-pro-info{
+    flex: 9;
+}
+
+.create-btn{
+    margin-top:40px;
+}

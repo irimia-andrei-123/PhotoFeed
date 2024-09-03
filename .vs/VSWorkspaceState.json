@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\a_PhotoFeed.POCO",
+    "\\a_PhotoFeed.POCO\\a_PhotoFeed.POCO",
+    "\\a_PhotoFeed.POCO\\c_PhotoFeed.Repository",
+    "\\a_PhotoFeed.POCO\\c_PhotoFeed.Repository\\Implementations",
+    "\\a_PhotoFeed.POCO\\d_PhotoFeed.DTO",
+    "\\a_PhotoFeed.POCO\\e_PhotoFeed.Services",
+    "\\a_PhotoFeed.POCO\\e_PhotoFeed.Services\\Implementations",
+    "\\a_PhotoFeed.POCO\\f_PhotoFeed.WebApi",
+    "\\a_PhotoFeed.POCO\\f_PhotoFeed.WebApi\\Controllers"
+  ],
+  "SelectedNode": "\\a_PhotoFeed.POCO\\e_PhotoFeed.Services\\Implementations\\ContestBasicService.cs",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,41 @@
+
+<div class="company-profile-container">
+
+  <div class="company-info-left-container">
+    
+    <div class="company-info-left-header">
+      <h2>Info</h2>
+    </div>
+
+    <div class="company-info-left">
+      <p class="info-title">Description:</p>
+      <p>{{company.Description}}</p>
+
+      <br>
+      <p class="info-title">Contact:</p>
+      <div *ngFor="let i of company.Contact">
+        <a class="website-info" href="{{i.WebsiteUrl}}">{{i.WebsiteName}}</a><br>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="company-info-right-container">
+
+  <img class="company-image" src="{{company.ProfilePicture}}">
+
+    <div class="company-info-right">
+      <p class="info-title">{{company.CompanyName}}</p>
+
+      <p class="website-info" (click)="navigateTo('company-members')" *ngIf="isCompany">Members</p>
+ 
+      <p class="website-info" (click)="navigateTo('company-contests')" *ngIf="isCompany">Contests</p>
+      
+      <p class="website-info" (click)="navigateToNewContest()" *ngIf="currentCompany">New Contest</p>      
+
+    </div>
+
+  </div>
+
+</div>

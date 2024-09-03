@@ -1,0 +1,18 @@
+
+.home-container{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 50px 0 50px;
+}
+
+.admin-user-name{
+    height: fit-content;
+    align-self: center;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.containerdoi {
+    padding-left: 15px;
+}

@@ -1,0 +1,6 @@
+C:\Z_personal\proiecte\PhotoFeed_Project\a_PhotoFeed.POCO\d_PhotoFeed.DTO\bin\Debug\d_PhotoFeed.DTO.dll
+C:\Z_personal\proiecte\PhotoFeed_Project\a_PhotoFeed.POCO\d_PhotoFeed.DTO\bin\Debug\d_PhotoFeed.DTO.pdb
+C:\Z_personal\proiecte\PhotoFeed_Project\a_PhotoFeed.POCO\d_PhotoFeed.DTO\obj\Debug\d_PhotoFeed.DTO.csprojAssemblyReference.cache
+C:\Z_personal\proiecte\PhotoFeed_Project\a_PhotoFeed.POCO\d_PhotoFeed.DTO\obj\Debug\d_PhotoFeed.DTO.csproj.CoreCompileInputs.cache
+C:\Z_personal\proiecte\PhotoFeed_Project\a_PhotoFeed.POCO\d_PhotoFeed.DTO\obj\Debug\d_PhotoFeed.DTO.dll
+C:\Z_personal\proiecte\PhotoFeed_Project\a_PhotoFeed.POCO\d_PhotoFeed.DTO\obj\Debug\d_PhotoFeed.DTO.pdb

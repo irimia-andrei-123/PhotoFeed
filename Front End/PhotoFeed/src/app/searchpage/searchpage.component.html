@@ -1,0 +1,36 @@
+<div>
+  <div class="search">
+    <mat-form-field class="tags">
+      <mat-chip-list #chipList>
+        <mat-chip *ngFor="let tag of tags" [selectable]="selectable"
+                  [removable]="removable" (removed)="remove(tag)">
+          {{tag}}
+          <mat-icon matChipRemove>cancel</mat-icon>
+        </mat-chip>
+        <input placeholder="Search tags"
+                [matChipInputFor]="chipList"
+                [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                [matChipInputAddOnBlur]="addOnBlur"
+                (matChipInputTokenEnd)="add($event)"
+                (keydown)="($event.keyCode === 13) ? search() : {}">
+      </mat-chip-list>
+    </mat-form-field>
+
+    <button mat-stroked-button (click)="search()">Search</button>
+
+  </div>
+      
+  <div *ngIf="pictures" class="search-results">
+      <h2>Best matches:</h2>
+
+      <div>
+        <div *ngFor="let picture of pictures" class="search-result-images-container">
+          <div class="search-image">
+            <p class="search-user">Username</p>
+            <img src="{{picture.Image}}" class="search-images-container" alt="Image"> 
+          </div>
+        </div>
+      </div>
+  </div>
+
+</div>

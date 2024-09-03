@@ -1,0 +1,38 @@
+
+<div class="contest-basic-form-container">
+  <h2>Create a contest:</h2>
+
+  <form class="contest-basic-form" [formGroup]="contestBasicForm">
+  
+    <div class="contest-basic-container">
+      <p class="contest-basic-field">Contest Name:</p>
+      <mat-form-field class="contest-basic-info">
+        <input matInput placeholder="Contest Name" formControlName="ContestName" required>
+      </mat-form-field>
+    </div>
+  
+    <div class="contest-basic-container">
+      <p class="contest-basic-field">Description:</p>
+      <mat-form-field class="contest-basic-info">
+        <textarea matInput placeholder="Contest Description" formControlName="Description" required></textarea>
+      </mat-form-field>
+    </div>
+    
+    <div class="contest-basic-container">
+      <p class="contest-basic-field">Maximum number of enteries:</p> 
+      <mat-form-field class="contest-basic-info">
+        <input matInput type="number" placeholder="Max number of photo submissions" formControlName="MaxPhotos" required>
+      </mat-form-field>
+    </div>
+
+    <div class="contest-basic-container">
+      <p class="contest-basic-field">End date:</p> 
+      <mat-form-field class="contest-basic-info">
+        <input matInput type="date" placeholder="Contest End Date" formControlName="EndDate" required>
+      </mat-form-field>
+    </div>
+
+    <button mat-stroked-button (click)="Create()" [disabled]="contestBasicForm.invalid" class="create-btn">Create Contest</button>
+    
+  </form>
+</div>

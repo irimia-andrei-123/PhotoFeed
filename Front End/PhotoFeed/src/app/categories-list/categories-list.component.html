@@ -1,0 +1,11 @@
+
+<div class="categories-container">
+    <h2 class="categories">Categories:</h2> 
+    <div *ngFor="let i of categoryArr">
+      <div class="category-info">
+        <h3 class="category-name"  (click)="navigateToCategory(i.IdCategory)">{{i.CategoryName}}</h3>
+        <p class="category-descriprion" *ngIf="i.Description!=null; else noDescription">{{i.Description}}</p>
+        <ng-template #noDescription><p class="category-descriprion">-</p></ng-template>
+      </div>
+    </div>
+  </div>

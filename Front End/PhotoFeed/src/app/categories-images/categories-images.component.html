@@ -1,0 +1,15 @@
+
+<div class="category-container">
+  <div *ngIf="!display_img;else displayImages">
+    <h2>Category Empty</h2>
+  </div>
+  <ng-template #displayImages>
+    <div class="image-container">
+      <div *ngFor="let i of imgArr" class="category-images-container">
+        <a class="image-poster" (click)="GoToUser(i.UserId)">{{i.Username}}</a> 
+        <img src="{{i.Image}}" class="image" alt="Category Picture" (click)="GoToImage(i.ImageId)"> 
+      </div>
+    </div>
+  </ng-template>
+</div>
+  

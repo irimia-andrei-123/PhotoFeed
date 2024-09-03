@@ -1,0 +1,12 @@
+C:\Z_personal\proiecte\PhotoFeed_Project\a_PhotoFeed.POCO\a_PhotoFeed.POCO\bin\Debug\a_PhotoFeed.POCO.dll.config
+C:\Z_personal\proiecte\PhotoFeed_Project\a_PhotoFeed.POCO\a_PhotoFeed.POCO\bin\Debug\a_PhotoFeed.POCO.dll
+C:\Z_personal\proiecte\PhotoFeed_Project\a_PhotoFeed.POCO\a_PhotoFeed.POCO\bin\Debug\a_PhotoFeed.POCO.pdb
+C:\Z_personal\proiecte\PhotoFeed_Project\a_PhotoFeed.POCO\a_PhotoFeed.POCO\bin\Debug\EntityFramework.dll
+C:\Z_personal\proiecte\PhotoFeed_Project\a_PhotoFeed.POCO\a_PhotoFeed.POCO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Z_personal\proiecte\PhotoFeed_Project\a_PhotoFeed.POCO\a_PhotoFeed.POCO\bin\Debug\EntityFramework.xml
+C:\Z_personal\proiecte\PhotoFeed_Project\a_PhotoFeed.POCO\a_PhotoFeed.POCO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Z_personal\proiecte\PhotoFeed_Project\a_PhotoFeed.POCO\a_PhotoFeed.POCO\obj\Debug\a_PhotoFeed.POCO.csprojAssemblyReference.cache
+C:\Z_personal\proiecte\PhotoFeed_Project\a_PhotoFeed.POCO\a_PhotoFeed.POCO\obj\Debug\a_PhotoFeed.POCO.csproj.CoreCompileInputs.cache
+C:\Z_personal\proiecte\PhotoFeed_Project\a_PhotoFeed.POCO\a_PhotoFeed.POCO\obj\Debug\a_PhotoFeed.POCO.csproj.CopyComplete
+C:\Z_personal\proiecte\PhotoFeed_Project\a_PhotoFeed.POCO\a_PhotoFeed.POCO\obj\Debug\a_PhotoFeed.POCO.dll
+C:\Z_personal\proiecte\PhotoFeed_Project\a_PhotoFeed.POCO\a_PhotoFeed.POCO\obj\Debug\a_PhotoFeed.POCO.pdb

@@ -1,0 +1,36 @@
+
+.category-images-container{
+    padding-top: 30px;
+    width: 95%;
+
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.category-container-image{
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.feedback-user-images-container{
+    display: inline-table;
+    width: 30%;
+    height: auto;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: rgb(243, 243, 243);
+}
+.feedback-image-upload-form{
+    display: flex;
+    flex-direction: column;
+}
+
+#display_img{
+    width: auto;
+    height: 70px;
+    float: right;
+}

@@ -1,0 +1,28 @@
+<div class="portfolio-page-container">
+  <h2>
+    {{ contestInfo.ContestName }}
+    {{ contestEnded ? "results" : "submissions" }}:
+  </h2>
+
+  <div class="portfolio-images-container">
+    <div class="image-info" *ngFor="let submission of submissions">
+      <img class="portfolio-image" src="{{ submission.Photo }}" />
+      <div
+        class="vote"
+        id="voteId{{ submission.IdPhotoProContest }}"
+        *ngIf="!contestEnded && isCompanyMember"
+      >
+        <mat-slider
+          thumbLabel
+          [displayWith]="formatLabel"
+          tickInterval="1"
+          min="1"
+          max="100"
+          (change)="updateVote($event)"
+          [value]="voteScore"
+        ></mat-slider>
+        <button (click)="Vote(submission.IdPhotoProContest)">Vote</button>
+      </div>
+    </div>
+  </div>
+</div>

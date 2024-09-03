@@ -1,0 +1,16 @@
+
+table {
+    width: 98.5%;
+    margin: 0 10px;
+} 
+
+.leaderboard-criteria{
+    width: 95%;
+    margin: 30px;
+}
+
+.image-poster{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}

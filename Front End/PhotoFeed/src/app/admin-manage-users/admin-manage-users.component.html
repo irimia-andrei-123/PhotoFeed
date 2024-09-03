@@ -1,0 +1,15 @@
+
+<div class="admin-user-page-container">
+  <h2>Users:</h2>
+
+  <div class="admin-users-container">
+    <div class="admin-user" *ngFor="let i of UsersList">
+      <img class="admin-user-profile-image" src={{i.ProfilePicture}}>
+      <h3 class="admin-user-name" (click)="GoToUser(i.IdUser)">{{i.UserName}}</h3>
+      <button (click)="ChangeBlockStatus(i.IdUser)">
+        <p *ngIf="i.Blocked == 0">Ban</p>
+        <p *ngIf="i.Blocked == 1">Unban</p>
+      </button>
+    </div>
+  </div>
+</div>

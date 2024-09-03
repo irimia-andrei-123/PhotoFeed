@@ -1,0 +1,11 @@
+
+<div class="feedback-categories-container">
+  <h2>Feedback Categories:</h2> 
+  <div *ngFor="let i of categoryArr">
+    <div class="feedback-category-info">
+      <h3 class="feedback-category-name"  (click)="navigateToCategory(i.IdCategory)">{{i.CategoryName}}</h3>
+      <p class="feedback-category-descriprion" *ngIf="i.Description!=null; else noDescription">{{i.Description}}</p>
+      <ng-template #noDescription><p class="feedback-category-descriprion">-</p></ng-template>
+    </div>
+  </div>
+</div>

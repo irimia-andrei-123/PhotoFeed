@@ -1,0 +1,118 @@
+
+.user-profile-container{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 50px 0 50px;
+}
+
+.user-info-left-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 9;
+    border-right: 1px solid lightgray;
+    padding-bottom: 25px
+}
+
+.user-info-left-header{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 100%;
+}
+
+.user-info-left-header h2{
+    flex: 11;
+}
+
+.user-info-left{
+    align-items: flex-end;
+    flex: 11;
+    width: 100%;
+}
+
+.info-title-rewards{
+    margin-bottom: -7px;
+    font-weight: bold;
+}
+
+.user-info-inline{
+    margin-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+
+.user-info-right-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    flex: 3;
+}
+
+.user-image{
+    align-self: center;
+    flex: 4;
+    width: 100%;
+    margin: 25px;
+    height: auto;
+    border-bottom: 1px solid lightgray;
+}
+
+.user-info-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 8;
+    width: 100%;
+}
+
+.info-title{
+    font-weight: bold;
+}
+
+.reward-info{
+    margin-top: -8px;
+    margin-left: 8px;
+}
+
+.submit-form-container{
+    width: 98%;
+}
+
+.submission_form{
+    margin-left: 35px;
+    width: 80%;
+}
+
+.submission_form button{
+    float: right;
+}
+
+.images{
+    display: inline;
+}
+
+#display_img{
+    position: relative;
+    width: 100px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.vote-button{ 
+    flex: 10;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.vote-button button{
+    height: 40px; 
+    width: 100%;
+}
+
+.website-info{
+    flex: 1;
+}

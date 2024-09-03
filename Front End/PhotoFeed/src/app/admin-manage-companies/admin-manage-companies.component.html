@@ -1,0 +1,15 @@
+
+<div class="admin-company-page-container">
+  <h2>Pending companies:</h2>
+
+  <div class="admin-companies-container">
+    <div class="admin-company" *ngFor="let i of CompaniesList">
+      <img src="{{i.ProfilePicture}}" class="admin-company-profile-image">
+      <h3 class="admin-company-name" (click)="GoToCompany(i.IdCompany)">{{i.CompanyName}}</h3> <!--onlcick redirect la porfilul company-ului-->
+      <div class="allow-deny-buttons">
+        <button (click)="AllowCompany(i.IdCompany)">Allow</button>
+        <button (click)="DenyCompany(i.IdCompany)">Deny</button>
+      </div>
+    </div>
+  </div>
+</div>
